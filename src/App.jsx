@@ -24,9 +24,10 @@ function App() {
   // }
   const [count, setCount] = useState(0)
   const [color, setColor] = useState(0)
+
   // Runs on every render
   useEffect(() => {
-    console.log("Hello Durgesh");
+    console.log("Hello Durgesh i am on every render");
   })
 
   // Runs on only first render
@@ -36,12 +37,21 @@ function App() {
   }, [])
 
   useEffect(() => {
+    console.log("This is called when count is changed")
+  }, [count])
+
+  useEffect(() => {
     console.log("This is called when color is changed")
   }, [color])
 
 
-  const handlClick = () => {
+
+
+  const handlClickColor = () => {
     setColor(color + 1);
+  }
+  const handlClickCount = () => {
+    setColor(count + 1);
   }
   return (
     <>
@@ -59,8 +69,11 @@ function App() {
       {/* UseEffect */}
       <h1>{count}</h1>
       <h2>{color}</h2>
-      <button className="btn btn-primary" onClick={handlClick}>
-        Click Me
+      <button className="btn btn-primary" onClick={handlClickColor}>
+        Click Color
+      </button>
+      <button className="btn btn-primary" onClick={handlClickCount}>
+        Click Count
       </button>
 
     </>
