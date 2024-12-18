@@ -1,10 +1,10 @@
 import React from 'react'
 import Comp2 from './Comp2'
 
-const Comp1 = () => {
+const Comp1 = (props) => {
     return (
         <>
-            <div>This is Comp1</div>
+            <div>This is  {props.home}</div>
             <Comp2 />
         </>
     )

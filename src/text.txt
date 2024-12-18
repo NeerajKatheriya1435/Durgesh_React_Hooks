@@ -1,8 +1,0 @@
-Prop Drilling --Problem
-
-To solve this problem we use Context API
-
-App.js
-    Comp1.js name={count}
-        Comp2.js 
-            Comp3.js

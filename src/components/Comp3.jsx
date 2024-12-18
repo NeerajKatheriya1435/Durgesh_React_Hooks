@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { Counter } from '../context/CounterContext';
+import { counter } from '../context/CounterContext'
 const Comp3 = () => {
-    const object1 = useContext(Counter);
+    const counter123 = useContext(counter)
     return (
         <>
-            <div>This is Comp3 {object1.name}</div>
-            <button className="btn btn-secondary" onClick={() => { object1.setName("Puja") }}>
+            <div>This is Comp3 {counter123.name}</div>
+            <button className="btn btn-secondary" onClick={() => { counter123.setName("Durgesh") }} >
                 Change Name
             </button>
         </>

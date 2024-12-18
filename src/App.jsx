@@ -1,9 +1,7 @@
 
-import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Comp1 from './components/Comp1';
 import { CounterProvider } from './context/CounterContext';
-// import counter from './context/CounterContext';
 
 function App() {
   return (

@@ -1,12 +1,12 @@
 import { createContext, useState } from "react";
 
-export const Counter = createContext();
+export const counter = createContext();
 
 export const CounterProvider = ({ children }) => {
-    const [name, setName] = useState(0)
+    const [name, setName] = useState("Tech_Mech")  //item
     return (
-        <Counter.Provider value={{ name, setName }}>
+        <counter.Provider value={{ name, setName }}>
             {children}
-        </Counter.Provider>
+        </counter.Provider>
     )
 }
